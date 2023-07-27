@@ -1,3 +1,4 @@
+import { Log } from 'src/helpers';
 import { Telegram } from 'telegraf';
 
 export class TelegramAPI {
@@ -28,6 +29,6 @@ export class TelegramAPI {
   }
 
   log(msg: string) {
-    console.log(`[TelegramAPI] ${msg}`);
+    Log.write('TELEGRAM_API', `${msg}`);
   }
 }
