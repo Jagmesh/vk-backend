@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  vk-backend:
+    image: jagmesh/vk-backend:latest
+    container_name: vk-container
+    ports:
+      - "80:1337"  
+    restart: always
+  gifnot:
+    image: garageorder/vkgifnot:latest
+    container_name: gifnot-container
+    environment:
+      - GIF_TOKEN=841083bf561a8891d77b964d6b8f6f45ae24bc802d3b129c26678f4782047b8f8c321e842ea34bc4bad65
+      - NOTIFIER_TOKEN=64d6c1188720d37b4eebb07ae882fdda0eb1320691318681c3027b2c235a0307e3f081f1459a31276176b
+      - NOTIFIED_USERS=185241998 30152694 197154078
+    restart: always

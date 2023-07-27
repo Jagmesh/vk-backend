@@ -1,0 +1,14 @@
+{
+  "name": "ct2.0",
+  "version": "1.0.0",
+  "description": "Calltracking new",
+  "main": "index.js",
+  "scripts": {
+    "configure": "bash ./pushFilesAndRun.sh",
+    "up": "bash ./composeCopyAndUp.sh",
+    "connect": "bash ./connect.sh"
+  },
+  "keywords": [],
+  "author": "Mikhail Litovchenko",
+  "license": "ISC"
+}
