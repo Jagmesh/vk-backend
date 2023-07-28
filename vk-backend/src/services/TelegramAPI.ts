@@ -20,9 +20,11 @@ export class TelegramAPI {
     }
   }
 
-  async sendDocument(url: string) {
+  async sendDocument(url: string, caption: string) {
     try {
-      await this.telegram.sendDocument(this.chatID, url);
+      await this.telegram.sendDocument(this.chatID, url, {
+        caption: '',
+      });
     } catch (error) {
       this.log(`Ошибка: ${error}`);
     }
